@@ -9,6 +9,14 @@ class Post extends Model
 {
     use HasFactory;
 
+
+    public function subContent()
+    {
+        return substr($this->content, 0, 200) . '...';
+    }
+
+
+
     /**
      * The attributes that are mass assignable.
      *
